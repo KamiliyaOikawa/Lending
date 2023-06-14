@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="{% static 'js/oikawakuroo.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/oikawa_kuroo.css'%}">
+</head>
+<body>
+<div>
+    <div class="all">
+        <div class="menu">
+            <div class="border">
+                <a href=""></a>
+                <div class="menushka">
+                    <button class="burger">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
+                    <button>Оформить заказ</button>
+                    <a><img src="{{ MEDIA_URL }}{{ login.png }}"></a>
+                </div>
+            </div>
+        </div>
+        <!--        <div class="slider">-->
+        <!--            <div class="slider-inner">-->
+        <!--                <div class="slider-item">-->
+        <!--                    <img src="{{ MEDIA_URL }}{{ frame1.png }}">-->
+        <!--                </div>-->
+        <!--                <div class="slider-item">-->
+        <!--                    <img src="{{ MEDIA_URL }}{{ frame2.png }}">-->
+        <!--                </div>-->
+        <!--                <div class="slider-item">-->
+        <!--                    <img src="{{ MEDIA_URL }}{{ frame3.png }}">-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </div>
+    <div class="description"></div>
+</div>
+
+</body>
+</html>

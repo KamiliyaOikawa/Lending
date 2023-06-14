@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/privateroom.css'%}">
+</head>
+<body>
+    <h2 class="profile-title">Profile</h2>
+    <form class="profile-form" method="post" enctype="multipart/form-data">
+         <div class="form-group">
+            <label for="photo">Photo:</label>
+            {{ form.photo }}
+        </div>
+        {% csrf_token %}
+        <div class="form-group">
+            <label >Username:</label>
+            {{ form.username }}
+        </div>
+        <div class="form-group">
+            <label >Email:</label>
+            {{ form.email }}
+        </div>
+        <div class="form-group">
+            <label>Name:</label>
+            {{ form.name }}
+        </div>
+        <div class="form-group">
+            <label >telegram:</label>
+            {{ form.telegram }}
+        </div>
+        <div class="form-group">
+            <label for="photo">Photo:</label>
+            {{ form.photo }}
+        </div>
+
+        <div class="form-group">
+            <label >Info:</label>
+            {{ form.additional_info }}
+        </div>
+        <button class="submit-btn" type="submit">Save</button>
+
+    </form>
+</body>
+</html>

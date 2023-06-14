@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body>
+<div class="block">
+    <div class="reg">
+        <form method="post" action="{% url 'login' %}">
+            <h2>Login</h2>
+            {% csrf_token %}
+            {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+                {{ form.non_field_errors }}
+            </div>
+            {% endif %}
+            <label for="username">Username:</label>
+            <input class="form-control w-75" placeholder="User Name" type="text" id="username" name="username">
+            <br>
+            <label for="password">Password:</label>
+            <input class="form-control w-75" placeholder="Password"type="password" id="password" name="password">
+            <br>
+            <button class="button" type="submit">Login</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

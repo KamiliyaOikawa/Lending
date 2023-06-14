@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class='block'>
+    <div class="reg">
+        <form method="post">
+            <h2>Registration</h2>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class='button' type="submit">Register</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
